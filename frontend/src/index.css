@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::selection {
+  background-color: #E8491D;
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CFC0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A227;
+}
+
+.container-page {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-ember text-white px-5 py-2.5 rounded-sm2 font-semibold hover:bg-ember-dark transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-ink text-white px-5 py-2.5 rounded-sm2 font-semibold hover:bg-char transition-colors duration-150;
+}
+
+.btn-outline {
+  @apply border border-ink text-ink px-5 py-2.5 rounded-sm2 font-semibold hover:bg-ink hover:text-white transition-colors duration-150;
+}
+
+.input-field {
+  @apply w-full border border-line bg-white px-4 py-2.5 rounded-sm2 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-ember/40 focus:border-ember transition;
+}
+
+.card {
+  @apply bg-white border border-line rounded-sm2;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out;
+}
